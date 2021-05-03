@@ -35,6 +35,8 @@ User Interface: This neat UI utilized object oriented programming to present a d
 ## Usage
 Download GloVe vector list [here](https://www.kaggle.com/yutanakamura/glove42b300dtxt/) to run notebooks in the supervised_learning folder. Under Supervised Model, copy and paste model dashboard code to activate UI.
 
+Use https://www.kaggle.com/takuok/glove840b300dtxt in order to download and insert the large glove.txt file onto your device for the supervised learning model.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
