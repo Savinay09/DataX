@@ -16,12 +16,17 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install any nec
 
 ```bash
 pip install guidedLDA
+pip install panel
+pip install param
+
+pn.extension('plotly')
 [mentioned by arash to include steps, any more key packages to include here?]
 ```
 
 ## Usage
 
 Download GloVe vector list [here](https://www.kaggle.com/yutanakamura/glove42b300dtxt/) to run notebooks in supervised_learning folder.
+Under Supervised Model, copy and paste model dashboard code to activate UI. 
 
 
 ## Contributing
