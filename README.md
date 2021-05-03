@@ -25,7 +25,11 @@ The team’s primary goal was to accurately and efficiently determine the varyin
 
 ## Detailed Solution 
 Unsupervised Learning: In order to derive emotional intensity scores, GuidedLDA was utilized to determine emotion clusters and the probability each email subject line belonged to each cluster. At a high level, the unsupervised portion contains sections of data pre-processing, creating globe vectors, implementing guidedLDA, visualization of results through pyldavis, and comparison of guidedLDA results against manually labeled results. All related code in this analysis may be found in the unsupervised_learning folder. Ensure that all packages are installed when running the file unsupervised_learning_model.ipynb.
+
+
 Supervised Model: Utilizing the labels produced by the unsupervised learning, convolutional neural network (CNN) and long short-term memory (LSTM) models were implemented. Pearson correlation was utilized to determine the performance of the models. All related code in this analysis may be found in the supervised_learning folder. 
+
+
 User Interface: This neat UI utilized object oriented programming to present a dashboard that allows users to compare multiple subject lines based on emotional intensities and aids them in strategic marketing decisions. Users are able to compare and contrast up to five subject lines in any combinations they choose and scroll over each bar in the chart in order to view emotion intensity. The pie chart visualization provides an overall display of emotions conveyed and their respective proportions. With the graphics and data displayed by E-motion, marketers are better able to understand how varying diction can lead to different intensity levels of the target marketing emotions. With such analysis, marketers can customize email subject lines to fit along certain campaigns whether they are focused on evoking a sense of enthusiasm or urgency. All related code in this analysis may be found in the UI folder. 
 
 ## Usage
