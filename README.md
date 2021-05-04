@@ -23,22 +23,23 @@ Failure to segment, lack of personalization, and emails not adding value are the
 
 The team’s primary goal was to accurately and efficiently determine the varying levels of intensity for particular marketing emotions portrayed by promotional subject lines. Emails are still a main medium for advertising, especially in areas of company recruitment and grocery shopping. As such, understanding the emotions evoked by email subject lines is extremely important in predicting email open rate. This is because certain emotions like trust or greed make people more likely to act on impulse than reason which can lead to a higher chance of them opening the specific promotional email. In this effort, E-motion would be a comprehensive tool to allow marketers to fully understand the emotions being provoked to fully exploit email subject lines to increase email open rates. 
 
+## Creating the datasets
+The raw dataset utilized has the following columns: ‘subject’, ‘from’, and ‘date’. Our data was collected from gmail by downloading an mbox file and converting it to a csv file utilizing the code in the file create_dateset.ipynb. Utilize the code in unsupervised_learning_model.ipynb to produce a dataframe with emotional intensity labels for each respective email subject line that can easily be converted to a csv file. Utilize this dataset to train the supervised model in the supervised_learning folder. 
+
 ## Detailed Solution 
-Unsupervised Learning: In order to derive emotional intensity scores, GuidedLDA was employed to determine emotion clusters and the probability each email subject line belonged to each cluster. At a high level, the unsupervised portion contains sections of data pre-processing, creating GloVe vectors, implementing guidedLDA, visualization of results through pyldavis, and comparison of guidedLDA results against manually labeled results. All related code in this analysis may be found in the unsupervised_learning folder. Ensure that all packages are installed when running the file unsupervised_learning_model.ipynb.
+Unsupervised Learning: In order to derive emotional intensity scores, GuidedLDA was utilized to determine emotion clusters and the probability each email subject line belonged to each cluster. At a high level, the unsupervised portion contains sections of data pre-processing, creating globe vectors, implementing guidedLDA, visualization of results through pyldavis, and comparison of guidedLDA results against manually labeled results. All related code in this analysis may be found in the unsupervised_learning folder. Ensure that all packages are installed when running the file unsupervised_learning_model.ipynb.
 
-
-Supervised Learning: Utilizing the labels produced by the unsupervised learning, convolutional neural network (CNN) and long short-term memory (LSTM) models were implemented with GloVe embeddings. The supervised portion contains sections of data pre-processing, creating GloVe vectors, as well as implementations of CNN and LSTM models, respectively. In addition to the losses and accuracies of the models, Pearson correlation coefficients were calculated in order to determine the performance of the models on individual emotions. All related code in this analysis may be found in the supervised_learning folder. 
-
+Supervised Model: Utilizing the labels produced by the unsupervised learning, convolutional neural network (CNN) and long short-term memory (LSTM) models were implemented with GloVe embeddings. The supervised portion contains sections of data pre-processing, creating GloVe vectors, as well as implementations of CNN and LSTM models, respectively. In addition to the losses and accuracies of the models, Pearson correlation coefficients were calculated in order to determine the performance of the models on individual emotions. All related code in this analysis may be found in the supervised_learning folder.
 
 User Interface: This neat UI utilized object oriented programming to present a dashboard that allows users to compare multiple subject lines based on emotional intensities and aids them in strategic marketing decisions. Users are able to compare and contrast up to five subject lines in any combinations they choose and scroll over each bar in the chart in order to view emotion intensity. The pie chart visualization provides an overall display of emotions conveyed and their respective proportions. With the graphics and data displayed by E-motion, marketers are better able to understand how varying diction can lead to different intensity levels of the target marketing emotions. With such analysis, marketers can customize email subject lines to fit along certain campaigns whether they are focused on evoking a sense of enthusiasm or urgency. All related code in this analysis may be found in the UI folder. 
 
 ## Usage
 Download GloVe vector list [here](https://www.kaggle.com/yutanakamura/glove42b300dtxt/) to run notebooks in the supervised_learning folder. Under Supervised Model, copy and paste model dashboard code to activate UI.
 
-Use https://www.kaggle.com/takuok/glove840b300dtxt in order to download and insert the large glove.txt file onto your device for the supervised learning model.
-
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/) - please refer to LICENSE.txt file for details.
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
